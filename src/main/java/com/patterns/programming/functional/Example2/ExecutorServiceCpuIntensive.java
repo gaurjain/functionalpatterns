@@ -4,7 +4,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-public class ExecutorServer {
+public class ExecutorServiceCpuIntensive {
 
     public static void main(String[] args)
     {

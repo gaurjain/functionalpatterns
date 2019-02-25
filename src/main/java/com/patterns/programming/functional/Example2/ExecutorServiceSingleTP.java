@@ -4,24 +4,25 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-public class ExecutorServiceFTP {
+public class ExecutorServiceSingleTP {
 
     public static void main(String[] args)
     {
         /*
         Instantiate a new executor service
-        that maintains a pool of threads
-        to be assigned tasks to be performed.
+        that maintains only one threads
+        to be assigned tasks to be performed from the blocking queue.
         */
-        ExecutorService service = Executors.newFixedThreadPool(10);
+        ExecutorService service = Executors.newSingleThreadExecutor();
 
         /*
-        Fixed thread pool assures fixed number of threads
-        available to fetch tasks from a blocking queue.
-        In this case, as many as 10 threads are pooled upfront.
+        Single thread pool assures that single thread takes
+        one task at a time and ensure
+        that task 1 runs before task 2 and so forth.
+
         */
 
-        for (int i = 0; i<100; i++) {
+        for (int i = 0; i<10; i++) {
 
             service.execute(new Task());
             /*
@@ -29,11 +30,10 @@ public class ExecutorServiceFTP {
             submitting them to the ExecutorService for execution.
             These tasks are queued by the Executor service
             in an internal blocking queue, which is threadsafe.
-            Inside Executor Service, each thread performs two tasks,
+            Inside Executor Service, the thread performs two tasks,
             fetch next task from blocking queue
             and execute the task (concurrently).
-            All active threads attempt to take the tasks from the queue concurrently
-            hence the queue has to be threadsafe.
+
             */
         }
 

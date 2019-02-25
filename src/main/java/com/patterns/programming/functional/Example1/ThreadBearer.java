@@ -32,7 +32,7 @@ public class ThreadBearer
             // Overriding the run method of the runnable object.
             System.out.println("Hello World!!!bhai,from the Thread named : " + Thread.currentThread().getName());
             try {
-                TimeUnit.SECONDS.sleep(10);
+                TimeUnit.SECONDS.sleep(30);
             } catch (InterruptedException ex) {
                 throw new IllegalStateException(ex);
             }

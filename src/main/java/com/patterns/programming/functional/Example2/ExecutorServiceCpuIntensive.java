@@ -11,22 +11,32 @@ public class ExecutorServiceCpuIntensive {
         int coreCount = Runtime.getRuntime().availableProcessors();
         System.out.println("Total number of coreCounts:"+ coreCount);
 
-        //Instantiate a new executor service
-        //that maintains a pool of threads
-        //to be assigned tasks to be performed.
-        ExecutorService service = Executors.newFixedThreadPool(100);
+        /*
+        Instantiate a new executor service
+        that maintains a pool of threads
+        to be assigned tasks to be performed.
+        */
+        ExecutorService service = Executors.newFixedThreadPool(coreCount);
+        /*
+        The Executor Service pools as many as
+        coreCount number of threads.
+        This way tasks get concurrently processed in batches
+        defined by number of available processors.
+        */
 
         for (int i = 0; i<100; i++) {
             service.execute(new CpuIntensiveTask());
-            // Creating new 'runnable' tasks and
-            // submitting them to the ExecutorService for execution.
-            // These tasks are queued by the Executor service
-            // in an internal blocking queue, which is threadsafe.
-            // Inside Executor Service, each thread performs two tasks
-            // Fetch next task from blocking queue
-            // and execute the task (concurrently).
-            // All threads attempt to take the tasks from the queue concurrently
-            // hence the queue has to be threadsafe.
+            /*
+            Creating new 'runnable' tasks and
+            submitting them to the ExecutorService for execution.
+            These tasks are queued by the Executor service
+            in an internal blocking queue, which is threadsafe.
+            Inside Executor Service, each thread performs two tasks
+            Fetch next task from blocking queue
+            and execute the task (concurrently).
+            All threads attempt to take the tasks from the queue concurrently
+            hence the queue has to be threadsafe.
+            */
 
         }
         System.out.println( "Jai Jinendra !!! from the main thread bearer Gaurav P Jain" );

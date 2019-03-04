@@ -1,13 +1,13 @@
-package com.patterns.programming.functional;
+package com.patterns.programming.functional.Example1;
 
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
 /**
- * Unit test for simple App.
+ * Unit test for simple ThreadBearer.
  */
-public class AppTest 
+public class ThreadBearerTest
 {
     /**
      * Rigorous Test :-)

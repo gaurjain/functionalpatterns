@@ -38,7 +38,6 @@ public class ExecutorServiceCTP {
                 fetch available task from the synchronous queue
                 and execute the task (concurrently).
             */
-
         }
         System.out.println( "Jai Jinendra !!! from the main thread bearer Gaurav P Jain" );
         System.out.println("Main thread bearer name : " + Thread.currentThread().getName());
@@ -54,7 +53,6 @@ public class ExecutorServiceCTP {
                 throw new IllegalStateException(ex);
             }
             System.out.println("Hello World bhai, CPU Thread bearer's name : " + Thread.currentThread().getName());
-
         }
     }
 

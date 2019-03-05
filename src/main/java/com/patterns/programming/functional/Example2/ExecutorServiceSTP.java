@@ -17,23 +17,36 @@ public class ExecutorServiceSTP {
         ScheduledExecutorService service = Executors.newScheduledThreadPool(10);
 
         /*
-        Executor service with 'Scheduled thread pool' type
-        helps to queue tasks in a delay queue,
-        schedule tasks to run based on a time delay
-        and retrigger for fixed rate or fixed delay.
+            Executor service with 'Scheduled thread pool' type
+            helps to queue tasks in a delay queue,
+            schedule tasks to run based on a time delay
+            and re-trigger for fixed rate or fixed delay.
+            It maintains a fixed pool of threads with
+            corePoolSize:10, maxPoolSize:Integer.MAX_VALUE, keepAliveTime:0 Sec
+            and workQueue: delayedWorkQueue to be assigned Runnable 'tasks' to be performed.
+
+            A blocking 'DelayedWorkQueue' is based on a heap-based data structure
+            in this implementation, every ScheduledFutureTask also records
+            its index into the heap array.
+            This eliminates the need to find a task upon cancellation,
+            greatly speeding up removal (down from O(n)
+            to O(log n)), and reducing garbage retention that would
+            otherwise occur by waiting for the element to rise to top
+            before clearing.
         */
 
         for (int i = 0; i<20; i++) {
 
-            //keep triggering tasks after 10 seconds delay
+            //Keep triggering tasks with the first task enabled after 10 seconds delay from now.
             service.schedule(new Task(),10,TimeUnit.SECONDS);
 
             //keep triggering tasks repeatedly after every 10 second
+            // with first task enabled after 15 sec delay from now.
             service.scheduleAtFixedRate(new Task(),15,10,TimeUnit.SECONDS);
 
             //keep triggering tasks repeatedly after 10 seconds of every previous completion
+            // with first task enabled after 15 sec from now.
             service.scheduleWithFixedDelay(new Task(),15,10,TimeUnit.SECONDS);
-
 
         }
         System.out.println( "Jai Jinendra !!! from the main thread bearer Gaurav P Jain" );

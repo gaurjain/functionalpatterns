@@ -9,23 +9,18 @@ public class ExecutorServiceSTP {
 
     public static void main(String[] args)
     {
-        /*
-        Instantiate a new executor service
-        that maintains a pool of threads
-        to be assigned tasks to be performed.
-        */
         ScheduledExecutorService service = Executors.newScheduledThreadPool(10);
-
         /*
             Executor service with 'Scheduled thread pool' type
             helps to queue tasks in a delay queue,
-            schedule tasks to run based on a time delay
+            It schedule tasks to run based on a time delay
             and re-trigger for fixed rate or fixed delay.
             It maintains a fixed pool of threads with
             corePoolSize:10, maxPoolSize:Integer.MAX_VALUE, keepAliveTime:0 Sec
             and workQueue: delayedWorkQueue to be assigned Runnable 'tasks' to be performed.
+            It returns the runnable tasks to a thread for which the scheduled-time has passed.
 
-            A blocking 'DelayedWorkQueue' is based on a heap-based data structure
+            A unbounded,blocking 'DelayedWorkQueue' is based on a heap-based data structure
             in this implementation, every ScheduledFutureTask also records
             its index into the heap array.
             This eliminates the need to find a task upon cancellation,
@@ -41,11 +36,11 @@ public class ExecutorServiceSTP {
             service.schedule(new Task(),10,TimeUnit.SECONDS);
 
             //keep triggering tasks repeatedly after every 10 second
-            // with first task enabled after 15 sec delay from now.
+            //with first task enabled after 15 sec delay from now.
             service.scheduleAtFixedRate(new Task(),15,10,TimeUnit.SECONDS);
 
             //keep triggering tasks repeatedly after 10 seconds of every previous completion
-            // with first task enabled after 15 sec from now.
+            //with first task enabled after 15 sec from now.
             service.scheduleWithFixedDelay(new Task(),15,10,TimeUnit.SECONDS);
 
         }

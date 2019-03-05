@@ -1,5 +1,6 @@
 package com.patterns.programming.functional.Example2;
 
+import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
@@ -8,49 +9,54 @@ public class ExecutorServiceFTP {
 
     public static void main(String[] args)
     {
-        /*
-        Instantiate a new executor service
-        that maintains a pool of threads
-        to be assigned tasks to be performed.
-        */
         ExecutorService service = Executors.newFixedThreadPool(10);
-
         /*
-        Fixed thread pool assures fixed number of threads
-        available to fetch tasks from a blocking queue.
-        In this case, as many as 10 threads are pooled upfront.
+            Instantiate a new {@code thread-pool} executor service
+            that maintains a fixed pool of threads with
+            corePoolSize:10, maxPoolSize:10, keepAliveTime:0Sec (not applicable)
+            and workQueue:LinkedBlockingQueue<Runnable>
+            to be assigned Runnable 'tasks' to be performed.
+            Fixed thread pool assures fixed number of threads
+            available to fetch {@code Runnable} 'tasks' from
+            a shared,unbounded, blocking queue, which is threadsafe.
+            At any point, at most 'nThreads' threads
+            will be active processing tasks.
+            If additional tasks are submitted when all threads are active,
+            they will wait in the unbounded queue until a thread is available.
         */
 
         for (int i = 0; i<100; i++) {
 
             service.execute(new Task());
             /*
-            Creating new 'runnable' tasks and
-            submitting them to the ExecutorService for execution.
-            These tasks are queued by the Executor service
-            in an internal blocking queue, which is threadsafe.
-            Inside Executor Service, each thread performs two tasks,
-            fetch next task from blocking queue
-            and execute the task (concurrently).
-            All active threads attempt to take the tasks from the queue concurrently
-            hence the queue has to be threadsafe.
+                Create new 'Runnable' tasks and
+                submitting them to the ExecutorService for execution.
+                Inside Executor Service, each thread performs two tasks,
+                fetch next task from blocking queue
+                and execute the task (concurrently).
+                All active threads attempt to take the
+                tasks from the queue concurrently, and
+                hence the queue has to be threadsafe.
             */
         }
 
         System.out.println( "Jai Jinendra !!! from the main thread bearer Gaurav P Jain" );
         System.out.println("Main thread bearer name : " + Thread.currentThread().getName());
-        service.shutdown();
+        service.shutdown(); //The threads in the pool will exist until it is explicitly shutdown.
+        //List<Runnable> runnables = service.shutdownNow();
         System.out.println("Executor Service is shutting down: "+ service.isShutdown());
+        //System.out.println((runnables));
     }
 
     static class Task implements Runnable {
         public void run() {
-            try {
+           try {
+                System.out.println("Hello World bhai, CPU Thread bearer's name : " + Thread.currentThread().getName());
                 TimeUnit.SECONDS.sleep(5);
-            } catch (InterruptedException ex) {
-                throw new IllegalStateException(ex);
-            }
-            System.out.println("Hello World bhai, CPU Thread bearer's name : " + Thread.currentThread().getName());
+           } catch (InterruptedException ex) {
+               throw new IllegalStateException(ex);
+           }
+
 
         }
     }

@@ -31,7 +31,6 @@ public class ExecutorServiceSingleTP {
             Inside Executor Service, the thread performs two tasks,
             fetch next task from blocking queue
             and execute the task (concurrently).
-
             */
         }
 

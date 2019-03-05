@@ -17,6 +17,7 @@ public class ExecutorServiceCTP {
             corePoolSize:0, maxPoolSize:Integer.MAX_VALUE, keepAliveTime:60 Sec,
             and workQueue: SynchronousQueue<Runnable>, which can
             only hold one task at a time.
+            It is not really a queue but rather a data structure.
             The cached pools will typically improve the performance
             of programs that execute many short-lived asynchronous tasks.
             Every time a task is submitted,

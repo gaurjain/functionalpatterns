@@ -1,5 +1,6 @@
 package com.patterns.programming.functional.Example2;
 
+import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
@@ -42,17 +43,20 @@ public class ExecutorServiceFTP {
         System.out.println( "Jai Jinendra !!! from the main thread bearer Gaurav P Jain" );
         System.out.println("Main thread bearer name : " + Thread.currentThread().getName());
         service.shutdown(); //The threads in the pool will exist until it is explicitly shutdown.
+        //List<Runnable> runnables = service.shutdownNow();
         System.out.println("Executor Service is shutting down: "+ service.isShutdown());
+        //System.out.println((runnables));
     }
 
     static class Task implements Runnable {
         public void run() {
-            try {
+           try {
+                System.out.println("Hello World bhai, CPU Thread bearer's name : " + Thread.currentThread().getName());
                 TimeUnit.SECONDS.sleep(5);
-            } catch (InterruptedException ex) {
-                throw new IllegalStateException(ex);
-            }
-            System.out.println("Hello World bhai, CPU Thread bearer's name : " + Thread.currentThread().getName());
+           } catch (InterruptedException ex) {
+               throw new IllegalStateException(ex);
+           }
+
 
         }
     }

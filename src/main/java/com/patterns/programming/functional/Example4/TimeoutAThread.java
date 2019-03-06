@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
  * How to Timeout a Thread?
  * Tip : Java threads cannot be killed,
  * They are cooperative in nature.
- * You need to ask them politely by using interrupts or volatile.
+ * You need to ask them politely by using interrupts.
  */
 
 public class TimeoutAThread {

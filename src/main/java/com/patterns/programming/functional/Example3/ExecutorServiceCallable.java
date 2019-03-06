@@ -9,30 +9,51 @@ public class ExecutorServiceCallable {
 
     public static void main(String[] args)
     {
-        ExecutorService service = Executors.newFixedThreadPool(100);
+        ExecutorService service = Executors.newCachedThreadPool();
 
         List<Future> allFutures = new ArrayList<>(); // A list to hold all Futures
 
         for (int i = 0; i<100; i++) {
+            /*
+                A {@code Future} represents the result of an asynchronous
+                computation.  Methods are provided to check if the computation is
+                complete, to wait for its completion, and to retrieve the result of
+                the computation.  The result can only be retrieved using method
+                {@code get} when the computation has completed, blocking if
+                necessary until it is ready.  Cancellation is performed by the
+                {@code cancel} method.
+            */
             Future<Integer> future = service.submit(new Task()); //Future expecting an integer from the callable task.
-            allFutures.add(future); //add the future to the list.
+            allFutures.add(future); //add the future to the array list.
+
         }    // 100 futures, with 100 placeholders.
 
-        // perform some unrelated operations
-        System.out.println("perform some unrelated operations");
+
+        System.out.println("perform some unrelated operations"); // perform some unrelated operations
 
         for (int i = 0; i<100; i++) {
-            Future<Integer> future = allFutures.get(i);
+            Future<Integer> future = allFutures.get(i); //get the futures from the array list one at a time.
+            try {  // check if the computation is complete.
+                System.out.println("Is the future task " + i + " completed: " + future.isDone());
+            } catch (CancellationException e) {
+                e.printStackTrace();
+            }
+
             try {
                 Integer result = future.get(1000,TimeUnit.MILLISECONDS); //blocking operation,
                 // wait for amount of 1 second and if future is not ready in that time, throw a timeout exception.
                 System.out.println("Result of future "+ i + "=" + result);
-
-            } catch (InterruptedException e) {
+            }
+            catch (CancellationException e) {
                 e.printStackTrace();
-            } catch (ExecutionException e) {
+            }
+            catch (InterruptedException e) {
                 e.printStackTrace();
-            } catch (TimeoutException e) {
+            }
+            catch (ExecutionException e) {
+                e.printStackTrace();
+            }
+            catch (TimeoutException e) {
                 System.out.println("Couldn't complete task before timeout");
             }
         }

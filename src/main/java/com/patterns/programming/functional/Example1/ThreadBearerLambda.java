@@ -3,8 +3,7 @@ package com.patterns.programming.functional.Example1;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Hello world! Thread bearer
- *
+ * Hello world! Thread bearer with lambda expression
  */
 public class ThreadBearerLambda
 {

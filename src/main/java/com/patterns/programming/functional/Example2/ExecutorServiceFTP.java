@@ -27,7 +27,7 @@ public class ExecutorServiceFTP {
 
         for (int i = 0; i<100; i++) {
 
-            service.execute(new Task());
+            service.submit(new Task());
             /*
                 Create new 'Runnable' tasks and
                 submitting them to the ExecutorService for execution.
@@ -42,10 +42,10 @@ public class ExecutorServiceFTP {
 
         System.out.println( "Jai Jinendra !!! from the main thread bearer Gaurav P Jain" );
         System.out.println("Main thread bearer name : " + Thread.currentThread().getName());
-        service.shutdown(); //The threads in the pool will exist until it is explicitly shutdown.
-        //List<Runnable> runnables = service.shutdownNow();
+        //service.shutdown(); //The threads in the pool will exist until it is explicitly shutdown.
+        List<Runnable> runnables = service.shutdownNow();
         System.out.println("Executor Service is shutting down: "+ service.isShutdown());
-        //System.out.println((runnables));
+        System.out.println((runnables));
     }
 
     static class Task implements Runnable {

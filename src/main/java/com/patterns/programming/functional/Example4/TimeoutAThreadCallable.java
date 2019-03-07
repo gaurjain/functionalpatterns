@@ -15,19 +15,19 @@ import java.util.concurrent.*;
 
 public class TimeoutAThreadCallable {
 
-    public static void main(String[] args)
-    {   //step 1: instantiate a thread-pool.
+    public static void main(String[] args) {   //Step 1: instantiate a thread-pool.
         ExecutorService service = Executors.newFixedThreadPool(10);
 
-        List<Future> allFutures = new ArrayList<>(); // Step 2: Declare and instantiate a list to hold all Futures
+        //Step 2: Declare and instantiate a list to hold all Futures
+        List<Future> allFutures = new ArrayList<>();
 
-        //step 3: pass on callable tasks to the service thread pool for execution.
-        for(int i =0 ; i<20; i++) {
+        //Step 3: pass on callable tasks to the service thread pool for execution.
+        for (int i = 0; i < 25; i++) {
             Future<Integer> future = service.submit(() -> {
                 if (!Thread.currentThread().isInterrupted()) {
-                    System.out.println("Hello World, Task bearer's name : " + Thread.currentThread().getName() + "..going to sleep");
+                    //System.out.println("Hello World, Task bearer's name : " + Thread.currentThread().getName() + "..going to sleep");
                     try {
-                        TimeUnit.SECONDS.sleep(30);
+                        TimeUnit.SECONDS.sleep(20);
                     } catch (InterruptedException ex) {
                         throw new IllegalStateException(ex);
                     }
@@ -35,29 +35,39 @@ public class TimeoutAThreadCallable {
                     //return new Random().nextInt();
                 }
                 Integer randomnumber = new Random().nextInt();
-                System.out.println("my number is:" + randomnumber);
+                System.out.println(Thread.currentThread().getName() + " my number is:" + randomnumber);
                 return randomnumber;
             });
             allFutures.add(future); //add the future to the array list
-
         }
-        //step 4: print something
+
+        //Step 4: print something (unrelated operation)
         System.out.println("main thread is executing steps in parallel...going to sleep");
 
-        //step 5: timeout  main thread for 1 minute (unrelated operation)
+        //Step 5: timeout main thread for 80 Seconds
         try {
-            TimeUnit.SECONDS.sleep(30);
+            TimeUnit.SECONDS.sleep(80);
             System.out.println("main thread's sleep is over!!");
-        }
-        catch (InterruptedException ex) {
+        } catch (InterruptedException ex) {
             throw new IllegalStateException(ex);
         }
 
-        //step 6: stop the thread by requesting thread-pool shutdown.
+        //Step 6: stop the thread by requesting thread-pool shutdown.
         List<Runnable> runnables = service.shutdownNow();
-        System.out.println((runnables));
+        System.out.println(runnables);
 
+        //Step 7: get the returned numbers from the futures list.
+        System.out.println(allFutures.size());
+        for (int i = 0; i < allFutures.size(); i++) {
+            try {
+                System.out.println("number from the futures:" + allFutures.get(i).get());
+            } catch (ExecutionException ex) {
+                throw new IllegalStateException(ex);
+            }
+            catch (InterruptedException ex) {
+                throw new IllegalStateException(ex);
+            }
+        }
 
     }
-
 }

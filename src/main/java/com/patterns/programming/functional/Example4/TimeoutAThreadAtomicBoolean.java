@@ -5,7 +5,14 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-public class TimeoutAThreadVolatile {
+/**
+ * How to Timeout a Thread?
+ * Tip : Java threads cannot be killed,
+ * They are cooperative in nature.
+ * You need to ask them politely by using AtomicBoolean.
+ */
+
+public class TimeoutAThreadAtomicBoolean {
 
     public static void main(String[] args)
     {
@@ -29,7 +36,6 @@ public class TimeoutAThreadVolatile {
         //Step 4: Stop the thread by requesting thread-pool shutdown.
         task.stop();
         System.out.println(task.keepRunning);
-        //service.shutdownNow();
 
     }
 
@@ -44,12 +50,13 @@ public class TimeoutAThreadVolatile {
                     System.out.println("Hello World, Task bearer's name : " + Thread.currentThread().getName() + "..going to sleep");
                     TimeUnit.SECONDS.sleep(10);
                     System.out.println("I am " + Thread.currentThread().getName() + " my sleep is over");
+
                 } catch (InterruptedException ex) {
                     throw new IllegalStateException(ex);
                 }
             }
 
-            System.out.println("I died");
+            System.out.println("I am dying...");
         }
 
         public void stop(){

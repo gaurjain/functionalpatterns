@@ -8,18 +8,16 @@ public class ExecutorServiceSingleTP {
 
     public static void main(String[] args)
     {
-        /*
-        Instantiate a new executor service
-        that maintains only one threads
-        to be assigned tasks to be performed from the blocking queue.
-        */
         ExecutorService service = Executors.newSingleThreadExecutor();
-
         /*
-        Single thread pool assures that single thread takes
-        one task at a time and ensure
-        that task 1 runs before task 2 and so forth.
-
+            Single thread pool assures that single thread takes
+            one 'runnable' task at a time and ensure
+            that task-1 runs before task-2 and so forth.
+            It creates an Executor that uses a single worker thread operating
+            off an unbounded queue.
+            It maintains a executor pool with a Single thread, defined with
+            corePoolSize:1, maxPoolSize:1, keepAliveTime:0 Sec
+            and workQueue: LinkedBlockingQueue<Runnable>, to be assigned Runnable 'tasks' to be performed.
         */
 
         for (int i = 0; i<10; i++) {
@@ -33,7 +31,6 @@ public class ExecutorServiceSingleTP {
             Inside Executor Service, the thread performs two tasks,
             fetch next task from blocking queue
             and execute the task (concurrently).
-
             */
         }
 

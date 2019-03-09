@@ -1,11 +1,10 @@
 package com.patterns.programming.functional.Example2;
 
-import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-public class ExecutorServiceFTP {
+public class ExecutorServiceFTPLambda {
 
     public static void main(String[] args)
     {
@@ -26,8 +25,19 @@ public class ExecutorServiceFTP {
         */
 
         for (int i = 0; i<100; i++) {
-
-            service.submit(new Task());
+            // creation and submission of the runnable task
+            // to the service thread pool for execution using lambda expression ()->{}
+            //service.execute(new Task());
+            service.execute(()->{
+                //task step 1
+                try {
+                System.out.println("Hello World bhai, CPU Thread bearer's name : " + Thread.currentThread().getName());
+                TimeUnit.SECONDS.sleep(5);
+                }
+                catch (InterruptedException ex) {
+                throw new IllegalStateException(ex);
+                }
+            });
             /*
                 Create new 'Runnable' tasks and
                 submitting them to the ExecutorService for execution.
@@ -42,24 +52,13 @@ public class ExecutorServiceFTP {
 
         System.out.println( "Jai Jinendra !!! from the main thread bearer Gaurav P Jain" );
         System.out.println("Main thread bearer name : " + Thread.currentThread().getName());
-        //service.shutdown(); //The threads in the pool will exist until it is explicitly shutdown.
-        List<Runnable> runnables = service.shutdownNow();
+        service.shutdown(); //The threads in the pool will exist until it is explicitly shutdown.
+        //List<Runnable> runnables = service.shutdownNow();
         System.out.println("Executor Service is shutting down: "+ service.isShutdown());
-        System.out.println((runnables));
+        //System.out.println((runnables));
     }
 
-    static class Task implements Runnable {
-        public void run() {
-           try {
-                System.out.println("Hello World bhai, CPU Thread bearer's name : " + Thread.currentThread().getName());
-                TimeUnit.SECONDS.sleep(5);
-           } catch (InterruptedException ex) {
-               throw new IllegalStateException(ex);
-           }
 
-
-        }
-    }
 
 
 

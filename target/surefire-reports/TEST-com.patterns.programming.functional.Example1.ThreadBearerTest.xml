@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.patterns.programming.functional.Example1.ThreadBearerTest" time="0.004" tests="1" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="gopherProxySet" value="false"/>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/gjain19/functionalpatterns/target/test-classes:/Users/gjain19/functionalpatterns/target/classes:/Users/gjain19/.m2/repository/junit/junit/4.12/junit-4.12.jar:/Users/gjain19/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/gjain19/.m2/repository/org/projectlombok/lombok/1.18.0/lombok-1.18.0.jar:/Users/gjain19/.m2/repository/com/google/guava/guava/20.0/guava-20.0.jar:/Users/gjain19/.m2/repository/ch/qos/logback/logback-classic/1.3.0-alpha4/logback-classic-1.3.0-alpha4.jar:/Users/gjain19/.m2/repository/ch/qos/logback/logback-core/1.3.0-alpha4/logback-core-1.3.0-alpha4.jar:/Users/gjain19/.m2/repository/org/slf4j/slf4j-api/1.8.0-beta1/slf4j-api-1.8.0-beta1.jar:/Users/gjain19/.m2/repository/com/sun/mail/javax.mail/1.6.0/javax.mail-1.6.0.jar:/Users/gjain19/.m2/repository/javax/activation/activation/1.1/activation-1.1.jar:/Users/gjain19/.m2/repository/org/functionaljava/functionaljava/4.8.1/functionaljava-4.8.1.jar:/Users/gjain19/.m2/repository/org/functionaljava/functionaljava-java8/4.8.1/functionaljava-java8-4.8.1.jar:/Users/gjain19/.m2/repository/org/functionaljava/functionaljava_1.8/4.8.1/functionaljava_1.8-4.8.1.jar:/Users/gjain19/.m2/repository/org/functionaljava/functionaljava-quickcheck/4.8.1/functionaljava-quickcheck-4.8.1.jar:/Users/gjain19/.m2/repository/org/junit/vintage/junit-vintage-engine/5.2.0/junit-vintage-engine-5.2.0.jar:/Users/gjain19/.m2/repository/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.jar:/Users/gjain19/.m2/repository/org/junit/platform/junit-platform-engine/1.2.0/junit-platform-engine-1.2.0.jar:/Users/gjain19/.m2/repository/org/junit/platform/junit-platform-commons/1.2.0/junit-platform-commons-1.2.0.jar:/Users/gjain19/.m2/repository/org/opentest4j/opentest4j/1.1.0/opentest4j-1.1.0.jar:/Users/gjain19/.m2/repository/org/functionaljava/functionaljava-java-core/4.8.1/functionaljava-java-core-4.8.1.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value=""/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib"/>
+    <property name="sun.java.command" value="/Users/gjain19/functionalpatterns/target/surefire/surefirebooter7725932599140005350.jar /Users/gjain19/functionalpatterns/target/surefire 2019-03-05T17-42-48_641-jvmRun1 surefire3640686977917455278tmp surefire_07007485560873565574tmp"/>
+    <property name="surefire.test.class.path" value="/Users/gjain19/functionalpatterns/target/test-classes:/Users/gjain19/functionalpatterns/target/classes:/Users/gjain19/.m2/repository/junit/junit/4.12/junit-4.12.jar:/Users/gjain19/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/gjain19/.m2/repository/org/projectlombok/lombok/1.18.0/lombok-1.18.0.jar:/Users/gjain19/.m2/repository/com/google/guava/guava/20.0/guava-20.0.jar:/Users/gjain19/.m2/repository/ch/qos/logback/logback-classic/1.3.0-alpha4/logback-classic-1.3.0-alpha4.jar:/Users/gjain19/.m2/repository/ch/qos/logback/logback-core/1.3.0-alpha4/logback-core-1.3.0-alpha4.jar:/Users/gjain19/.m2/repository/org/slf4j/slf4j-api/1.8.0-beta1/slf4j-api-1.8.0-beta1.jar:/Users/gjain19/.m2/repository/com/sun/mail/javax.mail/1.6.0/javax.mail-1.6.0.jar:/Users/gjain19/.m2/repository/javax/activation/activation/1.1/activation-1.1.jar:/Users/gjain19/.m2/repository/org/functionaljava/functionaljava/4.8.1/functionaljava-4.8.1.jar:/Users/gjain19/.m2/repository/org/functionaljava/functionaljava-java8/4.8.1/functionaljava-java8-4.8.1.jar:/Users/gjain19/.m2/repository/org/functionaljava/functionaljava_1.8/4.8.1/functionaljava_1.8-4.8.1.jar:/Users/gjain19/.m2/repository/org/functionaljava/functionaljava-quickcheck/4.8.1/functionaljava-quickcheck-4.8.1.jar:/Users/gjain19/.m2/repository/org/junit/vintage/junit-vintage-engine/5.2.0/junit-vintage-engine-5.2.0.jar:/Users/gjain19/.m2/repository/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.jar:/Users/gjain19/.m2/repository/org/junit/platform/junit-platform-engine/1.2.0/junit-platform-engine-1.2.0.jar:/Users/gjain19/.m2/repository/org/junit/platform/junit-platform-commons/1.2.0/junit-platform-commons-1.2.0.jar:/Users/gjain19/.m2/repository/org/opentest4j/opentest4j/1.1.0/opentest4j-1.1.0.jar:/Users/gjain19/.m2/repository/org/functionaljava/functionaljava-java-core/4.8.1/functionaljava-java-core-4.8.1.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/gjain19"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre"/>
+    <property name="basedir" value="/Users/gjain19/functionalpatterns"/>
+    <property name="file.separator" value="/"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="/Users/gjain19/functionalpatterns/target/surefire/surefirebooter7725932599140005350.jar"/>
+    <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/classes"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="1.8.0_77-b03"/>
+    <property name="user.name" value="gjain19"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="10.12.6"/>
+    <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/endorsed"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="/Users/gjain19/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/var/folders/2w/xyhx6_ss31zg7cwn64l_cdlcblqt3m/T/"/>
+    <property name="java.version" value="1.8.0_77"/>
+    <property name="user.dir" value="/Users/gjain19/functionalpatterns"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.library.path" value="/usr/local/lib/opt/mapr/hiveodbc/lib/universal:/Users/gjain19/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.77-b03"/>
+    <property name="java.ext.dirs" value="/Users/gjain19/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="java.class.version" value="52.0"/>
+  </properties>
+  <testcase name="shouldAnswerWithTrue" classname="com.patterns.programming.functional.Example1.ThreadBearerTest" time="0.001"/>
+</testsuite>

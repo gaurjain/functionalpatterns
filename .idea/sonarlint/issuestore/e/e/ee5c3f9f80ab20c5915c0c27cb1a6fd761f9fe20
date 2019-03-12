@@ -1,0 +1,11 @@
+
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(Ã¤š”ýÿÿÿÿ8‚ôÒƒ•-
+gsquid:S2142"FEither re-interrupt this method or rethrow the "InterruptedException".(è®ã¶øÿÿÿÿ8‚ôÒƒ•-
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(ÏŽ××üÿÿÿÿ8‚ôÒƒ•-
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(Ë¯äÀ8‚ôÒƒ•-
+|squid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(êÿšëúÿÿÿÿ8‚ôÒƒ•-
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(Å‹Õª8‚ôÒƒ•-

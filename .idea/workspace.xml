@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dc13f3e7-5a46-4d66-9c12-8f3f92a70e72" name="Default" comment="" />
+    <list default="true" id="dc13f3e7-5a46-4d66-9c12-8f3f92a70e72" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/patterns/programming/functional/Example5/ScatterGatherPattern.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/patterns/programming/functional/Example5/ScatterGatherPattern.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/patterns/programming/functional/Example5/PCPWithoutBlockingQueue.class" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,8 +30,8 @@
       <file leaf-file-name="ProducerConsumerPattern.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/patterns/programming/functional/Example5/ProducerConsumerPattern.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="61">
-              <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
+            <state relative-caret-position="111">
+              <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -48,11 +51,20 @@
       <file leaf-file-name="ScatterGatherPattern.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/patterns/programming/functional/Example5/ScatterGatherPattern.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1375">
-              <caret line="55" column="17" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
+            <state relative-caret-position="136">
+              <caret line="20" column="83" selection-start-line="20" selection-start-column="83" selection-end-line="20" selection-end-column="83" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CompletableFuture.java" pinned="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/src.zip!/java/util/concurrent/CompletableFuture.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="211">
+              <caret line="1899" column="62" selection-start-line="1899" selection-start-column="62" selection-end-line="1899" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -69,8 +81,8 @@
       <file leaf-file-name="MyBlockingQueue.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/patterns/programming/functional/Example5/MyBlockingQueue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+            <state relative-caret-position="225">
+              <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -419,15 +431,16 @@
       <workItem from="1551733802565" duration="322000" />
       <workItem from="1551734129417" duration="24349000" />
       <workItem from="1551912981228" duration="6414000" />
-      <workItem from="1551980889526" duration="32822000" />
+      <workItem from="1551980889526" duration="33588000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63907000" />
+    <option name="totallyTimeSpent" value="64673000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="-14" width="1920" height="1053" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Key Promoter X" order="9" weight="0.3297568" />
       <window_info anchor="right" id="Palette" order="3" />
@@ -439,9 +452,9 @@
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="5" weight="0.32960597" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.375134" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.375134" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.3279743" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.22829582" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.0" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Designer" order="2" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19169329" />
@@ -788,22 +801,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/patterns/programming/functional/Example5/MyBlockingQueue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+        <state relative-caret-position="225">
+          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/patterns/programming/functional/Example5/ProducerConsumerPattern.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
+        <state relative-caret-position="111">
+          <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/src.zip!/java/util/concurrent/CompletableFuture.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="1899" column="62" selection-start-line="1899" selection-start-column="62" selection-end-line="1899" selection-end-column="62" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/patterns/programming/functional/Example5/ScatterGatherPattern.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1375">
-          <caret line="55" column="17" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
+        <state relative-caret-position="136">
+          <caret line="20" column="83" selection-start-line="20" selection-start-column="83" selection-end-line="20" selection-end-column="83" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

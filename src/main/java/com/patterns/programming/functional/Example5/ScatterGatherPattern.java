@@ -23,11 +23,13 @@ public class ScatterGatherPattern {
         CompletableFuture<Void> allTasks = CompletableFuture.allOf(task1, task2, task3);
 
         try {
-               allTasks.get(6, TimeUnit.SECONDS);
+               /* Wait for at most 5 Seconds for this future
+                  to complete, and then returns the result, as available. */
+               allTasks.get(5, TimeUnit.SECONDS);
 
         }catch(TimeoutException ex)
         {
-            System.out.println("some API futures response delayed");
+            System.out.println("some API futures response got delayed");
         }catch(ExecutionException ex)
         {
             throw new IllegalStateException(ex);

@@ -1,0 +1,21 @@
+
+V
+squid:S106 "9Replace this use of System.out or System.err by a logger.(›ÔŸ§8 «•-
+isquid:S21422"FEither re-interrupt this method or rethrow the "InterruptedException".(²ı…¦ûÿÿÿÿ8 «•-
+V
+squid:S106="9Replace this use of System.out or System.err by a logger.(™”8 «•-
+Fsquid:S11486"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8 «•-
+Fsquid:S11483"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8 «•-
+bsquid:S21475"DCombine this catch with the one at line 47, which has the same body.(Ü¬û×8 «•-
+V
+squid:S1069"9Replace this use of System.out or System.err by a logger.(ÅÅ»î8 «•-
+[
+squid:S106-"9Replace this use of System.out or System.err by a logger.(Òî…Ïùÿÿÿÿ8 «•-
+[
+squid:S106?"9Replace this use of System.out or System.err by a logger.(»ˆå±üÿÿÿÿ8 «•-
+V
+squid:S106%"9Replace this use of System.out or System.err by a logger.(˜µ³–8 «•-
+ysquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(üôô8 «•-
+gsquid:S21472"DCombine this catch with the one at line 47, which has the same body.(²ı…¦ûÿÿÿÿ8 «•-
+Fsquid:S1148'"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8 «•-
+Fsquid:S11480"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8 «•-
